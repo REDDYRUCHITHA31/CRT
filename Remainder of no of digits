@@ -1,0 +1,15 @@
+//k.ruchitha rollno:6621.AIML
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,d,r;
+    scanf("%d",&n);
+    d=((int)log10(n))+1;
+    r=0;
+        r=n%d;
+        printf("%d",r);
+        return 0;
+}
