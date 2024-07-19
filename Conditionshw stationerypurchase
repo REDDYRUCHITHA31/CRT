@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int quantity,cost,total;
+    float gst,afterdis,dis,net;
+    scanf("%d%d",&quantity,&cost);
+    total=quantity*cost;
+    dis=0;
+    afterdis=total;
+    if(quantity>200){
+       dis=(20*total)/100;
+       afterdis=total-dis;
+       }
+    gst=(18*afterdis)/100;
+    net=afterdis + gst;
+    
+    if(quantity>200){
+        printf("Quantity Ordered %d\n",quantity);
+        printf("Price per item is Rs.%d\n",cost);
+        printf("Total Amount = Rs.%d\n",total);
+        printf("Discount Earned = Rs.%.1f\n",dis);
+        printf("Amount after Discount - Rs.%.1f\n",afterdis);
+        printf("GST - Rs.%.1f\n",gst);
+        printf("Net Amount Payable is Rs.%.1f\n",net);
+    }
+    else{
+        printf("Quantity Ordered %d\n",quantity);
+        printf("Price per item is Rs.%d\n",cost);
+        printf("Total Amount = Rs.%d\n",total);
+        printf("GST - Rs.%.1f\n",gst);
+        printf("Net Amount Payable is Rs.%.1f\n",net);
+    }
+    
+    
+    return 0;
+}
